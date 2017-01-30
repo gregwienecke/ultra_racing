@@ -1,5 +1,17 @@
 h1 {
-  color: #369;
+  color: salmon;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
+}
+
+h2 {
+	color: #444;
+}
+
+p {
+	background-color: black;
+	color: #fff;
+	width: 200px;
+	padding: 7px 0 7px 5px;
+	margin-top: -15px;
 }
