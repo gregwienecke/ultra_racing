@@ -1,7 +1,9 @@
 h1 {
-  color: salmon;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: yellow;
+  font-family: serif;
   font-size: 250%;
+  width: 230px;
+  padding-left: 5px;
 }
 
 h2 {
