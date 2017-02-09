@@ -11,8 +11,11 @@ import { CARPARTS } 	from './mocks';
 export class CarPartsComponent {
 	carParts: CarPart[];
 
-	upQuantity() {
-		alert("You called upQuantity");
+	upQuantity(carPart) {
+		if (carPart.quantity < carPart.inStock) {carPart.quantity++;}
+	}
+	downQuantity(carPart){
+		if (carPart.quantity > 0) {carPart.quantity--;}
 	}
 
 	ngOnInit(){
