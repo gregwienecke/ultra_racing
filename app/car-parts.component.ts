@@ -1,5 +1,5 @@
 import { Component } 	from '@angular/core';
-import { CarPart }		from './car-part.ts';
+import { CarPart }		from './car-part';
 import { CARPARTS } 	from './mocks';
 
 
@@ -9,7 +9,11 @@ import { CARPARTS } 	from './mocks';
 	styleUrls: ['app/car-parts.component.css']
 })
 export class CarPartsComponent {
-	carParts: CarPart[]; //why do we need this line?
+	carParts: CarPart[];
+
+	upQuantity() {
+		alert("You called upQuantity");
+	}
 
 	ngOnInit(){
 		this.carParts = CARPARTS;
