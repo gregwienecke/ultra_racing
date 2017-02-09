@@ -11,6 +11,10 @@ import { CARPARTS } 	from './mocks';
 export class CarPartsComponent {
 	carParts: CarPart[];
 
+	ngOnInit(){
+		this.carParts = CARPARTS;
+	}
+
 	upQuantity(carPart) {
 		if (carPart.quantity < carPart.inStock) {carPart.quantity++;}
 	}
@@ -18,9 +22,6 @@ export class CarPartsComponent {
 		if (carPart.quantity > 0) {carPart.quantity--;}
 	}
 
-	ngOnInit(){
-		this.carParts = CARPARTS;
-	}
 
 	totalCarParts(){
 		let sum = 0;

@@ -1,6 +1,6 @@
 import { CarPart } 	from './car-part';		
 
-export const CARPARTS: CarPart[] = [
+export let CARPARTS: CarPart[] = [
 	{
 		"id": 1,
 		"name": "Super Tires",
