@@ -15,10 +15,10 @@ export class CarPartsComponent {
 		this.carParts = CARPARTS;
 	}
 
-	upQuantity(carPart) {
+	upQuantity(carPart: CarPart) {
 		if (carPart.quantity < carPart.inStock) {carPart.quantity++;}
 	}
-	downQuantity(carPart){
+	downQuantity(carPart: CarPart){
 		if (carPart.quantity > 0) {carPart.quantity--;}
 	}
 
