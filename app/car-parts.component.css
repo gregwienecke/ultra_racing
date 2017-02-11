@@ -3,6 +3,16 @@
 	color: #444;
 	font-size: small;
 }
+
 .price {
 	font-weight: bold;
+}
+
+img {
+	width: 180px;
+	height: 180px;
+}
+
+input {
+	width: 30px;
 }

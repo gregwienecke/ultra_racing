@@ -3,13 +3,15 @@
 <ul>
 	<li *ngFor="let carPart of carParts">
 		<h2>{{carPart.name | uppercase}}</h2>
+		<img [src]="carPart.image">
 		<p class="description">{{carPart.description}}</p>
 		<p class="price">{{carPart.price | currency:'USD':true}}</p>
 		<p *ngIf="carPart.inStock > 0">{{carPart.inStock}} in stock</p>
 		<p *ngIf="carPart.inStock === 0">Out of Stock</p>
 
-		<p>{{carPart.quantity}}</p>
+		
 		<button (click)="downQuantity(carPart)"> - </button>
+		<input type="text" [(ngModel)]="carPart.quantity">
 		<button (click)="upQuantity(carPart)"> + </button>
 	</li>
 </ul>
