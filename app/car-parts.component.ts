@@ -1,6 +1,7 @@
 import { Component } 	from '@angular/core';
 import { CarPart }		from './car-part';
 import { CARPARTS } 	from './mocks';
+import { RacingDataService }	from './racing-data.service';
 
 
 @Component({
@@ -11,8 +12,12 @@ import { CARPARTS } 	from './mocks';
 export class CarPartsComponent {
 	carParts: CarPart[];
 
+	constructor(private racingDataService: RacingDataService){}
+
 	ngOnInit(){
-		this.carParts = CARPARTS;
+		//this.carParts = CARPARTS;
+		//let racingDataService = new RacingDataService();
+		this.carParts = this.racingDataService.getCarParts();
 	}
 
 	upQuantity(carPart: CarPart) {
